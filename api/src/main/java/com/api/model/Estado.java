@@ -1,10 +1,23 @@
 package com.api.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ESTADO")
 public class Estado {
 	
+	@Column(name = "ID_ESTADO", length = 10)
 	private Long idEstado;
+	
+	@Column(name = "ID_PAIS", length = 10, nullable = false)
 	private Long idPais;
+	
+	@Column(name = "NOME", nullable = false)
 	private String nome;
+	
+	@Column(name = "SIGLA", nullable = false)
 	private String sigla;
 	
 	

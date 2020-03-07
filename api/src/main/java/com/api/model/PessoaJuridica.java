@@ -1,8 +1,16 @@
 package com.api.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "PESSOA_FISICA")
 public class PessoaJuridica extends Pessoa {
-	
+	@Column(name = "ID_JURIDICA")
 	private Long idPessoaJuridica;
+	
+	@Column(name = "CNPJ", nullable = false)
 	private Long CNPJ;
 	
 	
@@ -18,8 +26,6 @@ public class PessoaJuridica extends Pessoa {
 	public void setCNPJ(Long cNPJ) {
 		CNPJ = cNPJ;
 	}
-	
-	
 	
 
 }

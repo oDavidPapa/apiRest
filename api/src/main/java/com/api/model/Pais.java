@@ -1,9 +1,20 @@
 package com.api.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "PAIS")
 public class Pais {
 	
+	@Column(name = "ID_PAIS", length = 10)
 	private Long idPais;
+	
+	@Column(name = "NOME")
 	private String nome;
+	
+	@Column(name = "SILGLA")
 	private String sigla;
 	
 	

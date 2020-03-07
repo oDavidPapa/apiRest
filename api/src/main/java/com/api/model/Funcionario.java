@@ -2,15 +2,35 @@ package com.api.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+@Entity
+@Table(name = "FUNCIONARIO")
 public class Funcionario extends Pessoa {
 	
+	@Column(name = "ID_FUNCIONARIO", length = 10)
 	private Long idFuncionario;
+	
+	@Column(name = "ID_PESSOA", length = 10, nullable = false)
 	private Long idPessoa;
+	
+	@Column(name = "ID_EMPRESA", length = 10, nullable = false)
 	private Long idEmpresa;
+	
+	@Column(name = "CARGO")
 	private String cargo;
+	
+	@Column(name = "STATUS")
 	private Long status;
+	
+	@Column(name = "DATA_ADMISSAO")
 	private Date dataAdmissao;
+	
+	@Column(name = "DATA_DEMISSAO")
 	private Date dataDemissao;
+	
+	@Column(name = "FOTO_PERFIL")
 	private String fotoPerfil;
 	
 	

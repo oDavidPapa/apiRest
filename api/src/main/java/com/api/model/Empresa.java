@@ -1,11 +1,26 @@
 package com.api.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "EMPRESA")
 public class Empresa {
 	
+	@Column(name = "ID_EMPRESA", length = 10)
 	private Long idEmpresa;
+	
+	@Column(name = "ID_ENDERECO", length = 10, nullable = false)
 	private Long idEndereco;
+	
+	@Column(name = "RAZAO_SOCIAL")
 	private String razaoSocial;
+	
+	@Column(name = "CNPJ")
 	private Long CNPJ;
+	
+	@Column(name = "LOGOMARCA", nullable = true)
 	private String logoMarca;
 	
 	

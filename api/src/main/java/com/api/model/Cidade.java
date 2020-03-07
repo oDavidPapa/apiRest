@@ -1,10 +1,22 @@
 package com.api.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "CIDADE")
 public class Cidade {
-	
+	@Column(name = "ID_CIDADE", length = 10)
 	private Long idCidade;
+	
+	@Column(name = "ID_ESTADO", length = 10, nullable = false)
 	private Long idEstado;
+	
+	@Column(name = "NOME")
 	private String nome;
+	
+	@Column(name = "CEP")
 	private String CEP;
 	
 	
